@@ -1,0 +1,8 @@
+const materias = [
+  {
+    nombre: "Psicología del Desarrollo I",
+    cursar: ["Fundamentos Psicogenéticos"],
+    rendir: ["Introducción a la Psicología"]
+  },
+  // más materias...
+];
