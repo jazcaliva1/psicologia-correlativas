@@ -4,5 +4,22 @@ const materias = [
     cursar: ["Fundamentos Psicogenéticos"],
     rendir: ["Introducción a la Psicología"]
   },
-  // más materias...
+  {
+    nombre: "Fundamentos Psicogenéticos",
+    cursar: [],
+    rendir: ["Introducción a la Psicología"]
+  },
+  // Agregás más materias acá...
 ];
+
+const malla = document.getElementById("malla");
+
+materias.forEach((materia) => {
+  const div = document.createElement("div");
+  div.className = "materia";
+  div.setAttribute("data-nombre", materia.nombre);
+  div.setAttribute("data-cursar", materia.cursar.join(", "));
+  div.setAttribute("data-rendir", materia.rendir.join(", "));
+  div.innerHTML = `<h3>${materia.nombre}</h3>`;
+  malla.appendChild(div);
+});
